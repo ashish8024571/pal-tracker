@@ -2,8 +2,8 @@ curl -i -XPOST -H"Content-Type: application/json" pal-tracker-ashish-ankur.apps.
 
 curl -i pal-tracker-ashish-ankur.apps.evans.pal.pivotal.io/time-entries/1
 
-cf service
+cf service (to create service)
 cf cups
 cf marketplace
-cf bind-service
+cf bind-service pal-tracker tracker-database
 cf ssh pal-tracker -->container information
