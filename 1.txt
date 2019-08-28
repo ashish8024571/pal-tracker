@@ -1,3 +1,9 @@
 curl -i -XPOST -H"Content-Type: application/json" pal-tracker-ashish-ankur.apps.evans.pal.pivotal.io/time-entries -d"{\"projectId\": 1, \"userId\": 2, \"date\": \"2019-01-01\", \"hours\": 8}"
 
 curl -i pal-tracker-ashish-ankur.apps.evans.pal.pivotal.io/time-entries/1
+
+cf service
+cf cups
+cf marketplace
+cf bind-service
+cf ssh pal-tracker -->container information
