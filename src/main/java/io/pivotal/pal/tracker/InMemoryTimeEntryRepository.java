@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicIntegerArray;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 
-@Component
+//@Component
 public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 
     Map<Long,TimeEntry> map = new HashMap<>();

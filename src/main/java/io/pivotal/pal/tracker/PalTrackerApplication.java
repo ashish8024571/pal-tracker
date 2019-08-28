@@ -7,14 +7,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-@EnableAutoConfiguration
 public class PalTrackerApplication {
 
-
-/* @Bean
+ @Bean
  public TimeEntryRepository getTimeEntryRepo(){
     return new InMemoryTimeEntryRepository();
- }*/
+ }
 
     public static void main(String[] args) {
         SpringApplication.run(PalTrackerApplication.class, args);
