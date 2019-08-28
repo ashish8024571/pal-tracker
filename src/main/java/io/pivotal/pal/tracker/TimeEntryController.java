@@ -12,16 +12,8 @@ import java.util.List;
 
 @RestController
 public class TimeEntryController {
-
-
-
-
     private TimeEntryRepository rep ;
-
-
-
     public TimeEntryController(  TimeEntryRepository rep) {
-
         this.rep = rep;
     }
 
@@ -33,7 +25,6 @@ public class TimeEntryController {
     }
 
     @RequestMapping(path = "/time-entries/{id}" , method = RequestMethod.GET)
-
     @ResponseBody
     public ResponseEntity<TimeEntry> read(@PathVariable("id") long id) {
         TimeEntry timeEntry = rep.find(id);
@@ -61,7 +52,6 @@ public class TimeEntryController {
     @RequestMapping(path = "/time-entries/{timeEntryId}" , method = RequestMethod.DELETE)
     @ResponseBody
     public ResponseEntity delete(@PathVariable("timeEntryId")long timeEntryId) {
-
         rep.delete(timeEntryId);
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }

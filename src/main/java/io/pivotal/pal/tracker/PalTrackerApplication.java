@@ -11,7 +11,10 @@ import org.springframework.context.annotation.Bean;
 public class PalTrackerApplication {
 
 
-
+/* @Bean
+ public TimeEntryRepository getTimeEntryRepo(){
+    return new InMemoryTimeEntryRepository();
+ }*/
 
     public static void main(String[] args) {
         SpringApplication.run(PalTrackerApplication.class, args);

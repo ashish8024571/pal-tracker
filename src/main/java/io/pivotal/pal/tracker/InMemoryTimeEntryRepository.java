@@ -23,7 +23,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     @Override
     public TimeEntry create(TimeEntry timeEntry) {
         long id = idObject.incrementAndGet();
-        TimeEntry timEntry = new TimeEntry(id,timeEntry.getProjectId(), timeEntry.getUserId(),timeEntry.getDate(),timeEntry.getHours());
+        TimeEntry timEntry = new TimeEntry(id,timeEntry);
         map.put(id,timEntry);
        return timEntry;
     }
@@ -52,7 +52,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
         TimeEntry value= map.get(l);
         TimeEntry newTimeEntry= null;
         if (value != null){
-            newTimeEntry = new TimeEntry(l,timeEntry.getProjectId(), timeEntry.getUserId(),timeEntry.getDate(),timeEntry.getHours());
+            newTimeEntry = new TimeEntry(l,timeEntry);
             map.replace(l,newTimeEntry);
 
         }

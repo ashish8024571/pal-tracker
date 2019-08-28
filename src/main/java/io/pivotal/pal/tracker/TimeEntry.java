@@ -8,6 +8,8 @@ public class TimeEntry {
     private long id;
     private long projectId;
     private long userId;
+    private LocalDate date;
+    private int hours;
 
     public long getProjectId() {
         return projectId;
@@ -41,24 +43,25 @@ public class TimeEntry {
         this.hours = hours;
     }
 
-    private LocalDate date;
-    private int hours;
 
-    public TimeEntry(long projectId, long userId, LocalDate parse, int hours) {
+
+    public TimeEntry(long projectId, long userId, LocalDate date, int hours) {
         this.projectId = projectId;
         this.userId=userId;
-        this.date=parse;
+        this.date=date;
         this.hours=hours;
 
 
     }
 
-    public TimeEntry(long timeEntryId, long projectId, long userId, LocalDate parse, int hours) {
+    public TimeEntry(long timeEntryId, long projectId, long userId, LocalDate date, int hours) {
+        this(projectId,  userId,  date,  hours);
         this.id =timeEntryId;
-        this.projectId = projectId;
-        this.userId=userId;
-        this.date=parse;
-        this.hours=hours;
+    }
+
+    public TimeEntry(long timeEntryId, TimeEntry timeEntry) {
+        this(timeEntry.projectId,  timeEntry.userId,  timeEntry.date,  timeEntry.hours);
+        this.id =timeEntryId;
     }
 
     public TimeEntry() {
