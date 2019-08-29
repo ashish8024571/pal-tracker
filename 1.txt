@@ -7,3 +7,7 @@ cf cups
 cf marketplace
 cf bind-service pal-tracker tracker-database
 cf ssh pal-tracker -->container information
+
+cf ssh -N -L 63306:q-n3s3y1.q-g24523.bosh:3306 pal-tracker
+mysql -h 127.0.0.1 -P 63306 -uUsername -pPassword
+
